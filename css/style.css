@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+.app {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 1fr;
+      grid-template-columns: 1.5fr 1fr;
+  -ms-grid-rows: 1fr, 1fr;
+      grid-template-rows: 1fr, 1fr;
+  margin: 0 auto;
+  max-width: 1800px;
+  height: 100vh;
+  background-color: #d28800;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#ffffff));
+  background-image: linear-gradient(to top, #000000, #ffffff);
+  opacity: .3;
+  z-index: -1;
+}
+
+.app .bottom-section {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  padding: 6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  row-gap: 1em;
+  color: #ffffff;
+}
+
+.app .bottom-section .temperature {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.app .bottom-section .city {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.app .bottom-section .time {
+  font-size: 2rem;
+}
+
+.app .right-section {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.5em;
+  padding: 3em;
+  height: 100vh;
+  color: #c0c0c0;
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.app .right-section .current-location {
+  padding: 0.5em;
+  width: 100%;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #c0c0c0;
+  outline: none;
+}
+
+.app .right-section .another-location {
+  font-weight: 500;
+}
+
+.app .right-section .another-city {
+  cursor: pointer;
+}
+
+.app .right-section .weather-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: .5em;
+  color: #ececec;
+}
+
+.app .right-section .weather-details .weather-title {
+  padding: 1em 0;
+}
+
+.app .right-section .weather-details .cloudy,
+.app .right-section .weather-details .humidity,
+.app .right-section .weather-details .wind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c51b4e0d7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="bottom-section">
+            <p class="temperature"></p>
+            <p class="city"></p>
+            <p class="time"></p>
+        </div>
+        <div class="right-section">
+            <input class="current-location" type="text" placeholder="Enter your location">
+            <p class="another-location">Another locations</p>
+            <p class="another-city">Paris</p>
+            <p class="another-city">London</p>
+            <p class="another-city">New York</p>
+            <p class="another-city">Tokyo</p>
+            <div class="weather-details">
+                <p class="weather-title">Weather Details</p>
+                <div class="cloudy">
+                    <p class="cloudy-title">Cloudiness</p>
+                    <p class="cloudy-result"></p>
+                </div>
+                <div class="humidity">
+                    <p class="humidity-title">Humidity</p>
+                    <p class="humidity-result"></p>
+                </div>
+                <div class="wind">
+                    <p class="wind-title">Wind</p>
+                    <p class="wind-result"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
