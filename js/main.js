@@ -1,11 +1,11 @@
 'use strict';
 
 const APIKey = '0d8287a4b3a6ebd715cfb24a5fb18503';
+const classes = ['.time', '.temperature', '.city', '.cloudy-result', '.humidity-result', '.wind-result', ];
 const input = document.querySelector('.current-location');
 
 function generateURL(key, city) {
   if (!city) city = 'Warsaw';
-
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`;
 
   return url;
@@ -34,16 +34,7 @@ function generateLocalTime(data) {
 }
 
 function showData(data, time) {
-  const elements = [
-    '.time',
-    '.temperature',
-    '.city',
-    '.cloudy-result',
-    '.humidity-result',
-    '.wind-result',
-  ];
-
-  document.querySelectorAll(elements).forEach((element) => {
+  document.querySelectorAll(classes).forEach((element) => {
     switch (element.className) {
       case 'time':
         element.textContent = time;
@@ -81,8 +72,10 @@ input.addEventListener('keydown', (e) => {
 
 document.querySelectorAll('.another-city').forEach((city) => {
   city.addEventListener('click', (e) => {
-    input.value = e.target.textContent;
-    initApp();
+    if (e.target === city) {
+      input.value = e.target.textContent;
+      initApp();
+    }
   });
 });
 
