@@ -1,7 +1,7 @@
 'use strict';
 
 const APIKey = '0d8287a4b3a6ebd715cfb24a5fb18503';
-const classes = ['.time', '.temperature', '.city', '.cloudy-result', '.humidity-result', '.wind-result', ];
+const classes = ['.time', '.temperature', '.city', '.cloudy-result', '.humidity-result', '.wind-result'];
 const input = document.querySelector('.current-location');
 
 function generateURL(key, city) {
